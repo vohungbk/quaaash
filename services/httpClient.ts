@@ -35,8 +35,6 @@ axios.interceptors.response.use(
 );
 
 function getApi(path: string, params?: any, apiURL?: string) {
-  console.log(params);
-
   return axios.get(`${apiURL || API_URL}/${path.replace(/^\//, '')}`, {
     params,
   });
