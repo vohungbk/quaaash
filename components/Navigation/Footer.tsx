@@ -26,13 +26,13 @@ const FOR_ARTISTS = ['FOR ARTISTS', 'Artist Community', 'Artist Login'];
 export const Footer = () => {
   const ListItem = (list: string[], className?: string) => {
     return (
-      <ul className={clsx('flex flex-col gap-[60px] mr-5', className)}>
+      <ul className={clsx('flex flex-col gap-10 md:gap-[60px] mr-0 md:mr-5', className)}>
         {list.map((item, index) => (
           <li
             key={uuidv4()}
             className={clsx(
               index === 0 ? 'font-semibold' : 'font-medium',
-              'text-[32px] leading-[48px] cursor-pointer hover:text-primary'
+              'text-[30px] md:text-[32px] leading-[48px] cursor-pointer hover:text-primary'
             )}
           >
             {item}
@@ -43,9 +43,9 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#02012E] flex items-start flex-wrap pt-[70px] pl-[160px] pb-[25px]">
-      <div className="w-[35%] lg:w-[30%] flex flex-col mr-[120px]">
-        <p className="mb-[43px] font-medium text-[32px] leading-[48px]">
+    <footer className="bg-[#02012E] flex items-start flex-wrap px-5 pt-[70px] md:pl-[160px] pb-[25px]">
+      <div className="w-full md:w-[35%] lg:w-[30%] flex flex-col md:mr-[120px] mb-5 md:mb-0">
+        <p className="mb-[43px] font-medium text-[30px] md:text-[32px] leading-[48px]">
           JOIN OUR MAILING LIST
         </p>
         <input
@@ -60,7 +60,7 @@ export const Footer = () => {
       </div>
 
       {ListItem(COMPANY, 'mb-5 lg:mb-0')}
-      {ListItem(SONGS, 'w-[35%] lg:w-auto')}
+      {ListItem(SONGS, 'w-full md:w-[35%] lg:w-auto mb-5 md:mb-0')}
       {ListItem(FOR_ARTISTS)}
     </footer>
   );

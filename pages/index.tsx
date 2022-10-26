@@ -12,7 +12,7 @@ import { FC } from 'react';
 import { HomeData } from 'shared/type';
 import { v4 as uuidv4 } from 'uuid';
 
-interface HomeProps {ß
+interface HomeProps {
   data: HomeData;
 }
 
@@ -30,11 +30,11 @@ const Home: FC<HomeProps> = ({ data }) => {
         <meta name="description" content="Quaaash" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-[#020308] bg-home-pattern bg-right-top bg-no-repeat pt-[30px] pr-[34px]">
+      <div className="bg-[#020308] bg-home-pattern bg-center md:bg-right-top bg-no-repeat pt-[30px] pr-0 md:pr-[34px]">
         <Header>
           <HeaderButton />
         </Header>
-        <div className="mt-[265px] ml-[120px]">
+        <div className="mt-[265px] text-center ml-0 md:ml-[120px]">
           <div className="font-light font-[Inter] text-[62px] leading-[75px] mb-[18px]">
             We make your <br />
             <strong className="font-bold">favourite celebrities</strong>
@@ -67,20 +67,20 @@ const Home: FC<HomeProps> = ({ data }) => {
         data={data?.topVideos.slice(0, 4)}
       />
       <section className="bg-[#272669] bg-opacity-[0.79] grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[808px]">
-        <div className="bg-artist mix-blend-luminosity bg-no-repeat h-[808px] w-full lg:h-full"></div>
+        <div className="bg-artist mix-blend-luminosity bg-no-repeat bg-center h-[808px] w-full lg:h-full"></div>
         <div className="flex flex-col justify-center items-center">
           <div className="text-center">
             <h4 className="font-light text-[42px] leading-[108px] mb-[30px]">
               THE PERFECT SONG IN 3 EASY STEPS
             </h4>
             <div className="flex justify-center items-center gap-[22px] mb-[50px]">
-              <div className="w-[152px] h-[152px] text-[#000000] rounded-full bg-[#ffffff] py-10 px0[57px]">
+              <div className="w-[100px] h-[100px] md:w-[152px] md:h-[152px] text-[#000000] rounded-full bg-[#ffffff] py-3 md:py-10 px-[25px] md:px-[57px]">
                 <span className="font-bold text-[62px] leading-[75px]">1</span>
               </div>
-              <div className="w-[152px] h-[152px] text-[#000000] rounded-full bg-[#ffffff] py-10 px0[57px]">
+              <div className="w-[100px] h-[100px] md:w-[152px] md:h-[152px] text-[#000000] rounded-full bg-[#ffffff] py-3 md:py-10 px-[25px] md:px-[57px]">
                 <span className="font-bold text-[62px] leading-[75px]">2</span>
               </div>
-              <div className="w-[152px] h-[152px] text-[#000000] rounded-full bg-[#ffffff] py-10 px0[57px]">
+              <div className="w-[100px] h-[100px] md:w-[152px] md:h-[152px] text-[#000000] rounded-full bg-[#ffffff] py-3 md:py-10 px-[25px] md:px-[57px]">
                 <span className="font-bold text-[62px] leading-[75px]">3</span>
               </div>
             </div>
@@ -99,7 +99,7 @@ const Home: FC<HomeProps> = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="pl-[67px] pr-[137px] pt-[131px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 2xl:gap-[56px] mb-[614px]">
+      <section className="px-5 md:pl-[67px] md:pr-[137px] pt-[131px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 2xl:gap-[56px] mb-[614px]">
         <div className="flex flex-col justify-center">
           <span className="mb-[23px] font-light text-[64px] leading-[77px] tracking-[-0.333333px]">
             New & <br /> <strong>Noteworthy</strong>
@@ -111,7 +111,7 @@ const Home: FC<HomeProps> = ({ data }) => {
             <img
               src={user?.profilePicture || '/img/artist3.svg'}
               alt=""
-              className="h-[424px] object-cover"
+              className="h-[424px] object-cover w-full"
             />
             <h4 className="font-semibold text-[32px] leading-[48px] tracking-[-0.408px] mb-1">
               {user?.name}
@@ -131,10 +131,10 @@ const Home: FC<HomeProps> = ({ data }) => {
           </div>
         ))}
       </section>
-      <section className="pb-[104px] bg-[#272669] h-[2419px] sm:h-[1577px] xl:h-[738px] relative pl-10 2xl:pl-[122px] pr-[142px]">
+      <section className="pb-[104px] bg-[#272669] h-[1800px] sm:h-[1577px] xl:h-[738px] relative md:pl-10 2xl:pl-[122px] px-5 md:pr-[142px]">
         <div className="text-center absolute top-[-446px]">
           <div className="text-center mb-[83px]">
-            <h2 className="mb-[53px] font-[Inter] font-semibold text-[62px] leading-[38px]">
+            <h2 className="mb-[53px] font-[Inter] font-semibold text-[62px] leading-[46px] md:leading-[38px]">
               Featured Song Creaters
             </h2>
             <Line

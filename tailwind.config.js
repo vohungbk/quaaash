@@ -10,6 +10,10 @@ module.exports = {
         'home-pattern': "url('/img/banner-home.svg')",
         artist: "url('/img/artist2.svg')",
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         primary: '#9A60DB',
         secondary: '#161540',
