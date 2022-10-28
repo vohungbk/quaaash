@@ -25,15 +25,15 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
   const [artists, setArtists] = useState<Artists[]>(data);
 
   const HeaderButton = () => (
-    <div className="hidden sm:flex items-center gap-3">
+    <div className="flex items-center flex-wrap gap-2 sm:gap-3">
       <ButtonPrimary
         text="ContinueYour Song"
-        className="rounded-[5px]"
+        className="rounded-[5px] w-full sm:w-auto"
         labelClassName="leading-9 font-semibold text-2xl"
       />
-      <button className="rounded-[5px] border border-solid border-white py-[14px] px-[55px]">
+      <button className="rounded-[5px] border border-solid border-white py-[14px] px-[55px] bg-transparent w-full sm:w-auto">
         <span className="font-medium text-2xl leading-9 tracking-[-0.333333px]">
-          Login
+          login
         </span>
       </button>
     </div>
@@ -47,8 +47,10 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           alt=""
           className="object-cover h-full w-full"
         />
-        <div className="bg-[#161540] bg-opacity-75 rounded-[149px] py-[10px] px-9 absolute right-[30px] bottom-[32px]">
-          <span className="font-semibold text-[20xp] leading-[30px]">$250</span>
+        <div className="bg-[#161540] bg-opacity-75 rounded-[149px] py-[10px] px-9 absolute sm:right-[30px] right-5 bottom-5 sm:bottom-[32px]">
+          <span className="font-semibold text-[20xp] leading-[30px]">
+            ${artist.price}
+          </span>
         </div>
       </div>
       <p className="font-medium text-[36px] leading-[54px] tracking-[-0.408px]">
@@ -100,17 +102,21 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
         <meta name="description" content="Customize Song" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="h-[1490px] md:h-[1088px] relative pt-[353px]">
-        <div className="bg-primary bg-opacity-40 w-[40%] blur-[170px] h-full absolute top-0 left-0"></div>
-        <div className="absolute top-0 right-0 left-0">
-          <img src="/img/mark.webp" alt="" className="ml-auto" />
+      <section className="h-[1250px] md:h-[1088px] relative sm:pt-[353px]">
+        <div className="bg-primary bg-opacity-40 w-[40%] blur-[170px] h-full absolute top-0 left-0 hidden sm:block"></div>
+        <div className="sm:absolute top-0 right-0">
+          <img
+            src="/img/mark.webp"
+            alt=""
+            className="ml-auto w-full sm:w-auto"
+          />
         </div>
 
-        <Header className="absolute top-0 right-0 left-0 mr-[34px]">
+        <Header className="absolute top-0 right-0 left-0 pt-5 sm:pt-0 mr-[34px]">
           <HeaderButton />
         </Header>
-        <div className="absolute top-[353px] left-[128px] max-w-[40%]">
-          <h2 className="font-[Inter] font-bold text-[72px] leading-[87px] mb-[22px]">
+        <div className="absolute top-[353px] left-0 sm:left-[128px] w-full sm:max-w-[40%] px-5 sm:px-0">
+          <h2 className="font-inter font-bold text-[60px] sm:text-[72px] leading-[87px] mb-[22px]">
             Explore our community of artists.
           </h2>
           <p className="font-[Inter] text-2xl mb-[93px]">
@@ -121,12 +127,12 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           <ButtonStart text="Start Your Song" className="px-[38px] py-[20px]" />
         </div>
       </section>
-      <section className="bg-[#272669] pt-[103px] pb-[48px] pr-[78px] pl-[95px]">
+      <section className="bg-[#272669] pt-[103px] pb-[48px] px-5 sm:pr-[78px] sm:pl-[95px]">
         <div className="flex items-center flex-wrap lg:flex-nowrap gap-5 md:gap-[63px] mb-[66px]">
           <div className="col-span-2 relative w-full lg:w-[60%]">
             <input
               placeholder="Search artist by name"
-              className="text-[#000000] pl-[139px] py-[38px] font-[Inter] font-medium text-[36px] leading-[44px] focus-visible:outline-none border-2 border-solid border-white rounded-[5px] shadow-black025 w-full"
+              className="text-[#000000] pl-14 sm:pl-[139px] py-5 sm:py-[38px] font-[Inter] font-medium text-2xl sm:text-[36px] leading-[44px] focus-visible:outline-none border-2 border-solid border-white rounded-[5px] shadow-black025 w-full"
               value={searchText}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 e.preventDefault();
@@ -138,12 +144,12 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
             <img
               src="/icon/search.svg"
               alt=""
-              className="absolute left-[66px] top-[50%] translate-y-[-24px]"
+              className="absolute left-2 sm:left-[66px] top-[50%] translate-y-[-24px]"
             />
           </div>
 
           <button
-            className="border-2 border-solid border-white rounded-[5px] drop-shadow-black025 py-[43px] px-[144px] font-semibold text-[52px] leading-[38px] w-full lg:w-auto"
+            className="border-2 border-solid border-white rounded-[5px] drop-shadow-black025 py-6 sm:py-[43px] sm:px-[144px] font-semibold text-[52px] leading-[38px] w-full lg:w-auto bg-transparent"
             onClick={getData}
           >
             Search
@@ -166,7 +172,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           ))}
         </div>
       </section>
-      <section className="pt-[86px] px-[134px]">
+      <section className="pt-[86px] px-5 sm:px-[134px]">
         {!!artists &&
           CATEGORY?.filter((category) => category.key !== 'all')?.map(
             (category) => {
@@ -180,8 +186,8 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
               if (!usersByCategory.length) return null;
               return (
                 <div key={uuidv4()} className="mb-[100px]">
-                  <div className="mb-[100px] flex items-center">
-                    <h2 className="font-[Inter] font-semibold text-[62px] leading-[58px] md:leading-[38px] mr-4 md:mr-9">
+                  <div className="mb-[100px] flex items-center sm:justify-start justify-between">
+                    <h2 className="font-[Inter] font-semibold text-[40px] sm:text-[62px] leading-[58px] md:leading-[38px] mr-4 md:mr-9">
                       {category.value}
                     </h2>
                     <Line width="w-[81px]" height="h-4" bgColor="bg-primary" />

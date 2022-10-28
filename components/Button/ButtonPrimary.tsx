@@ -14,7 +14,7 @@ export const ButtonPrimary: FC<
 > = ({ text, className, isShowIcon, labelClassName, ...props }) => (
   <button
     className={clsx(
-      'bg-primary font-light text-[28px] leading[38px] py-[14px] px-[24px] hover:opacity-90',
+      'bg-primary font-light text-sm sm:text-[28px] leading-3 sm:leading[38px] py-[14px] px-3 sm:px-[24px] hover:opacity-90',
       className
     )}
     {...props}

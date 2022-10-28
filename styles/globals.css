@@ -120,6 +120,10 @@ button {
   color: #ffffff;
 }
 
+input {
+  border: none;
+}
+
 * {
   box-sizing: border-box;
 }

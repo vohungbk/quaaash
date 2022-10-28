@@ -18,7 +18,7 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = ({ data }) => {
   const HeaderButton = () => (
-    <button className="bg-primary rounded-[5px] font-medium text-2xl tracking-[-0.333333px] py-[14px] px-[55px] cursor-pointer hover:opacity-90">
+    <button className="bg-primary rounded-[5px] font-medium text-2xl tracking-[-0.333333px] py-[14px] px-[55px] cursor-pointer hover:opacity-90 w-full sm:w-auto">
       Login
     </button>
   );
@@ -30,8 +30,8 @@ const Home: FC<HomeProps> = ({ data }) => {
         <meta name="description" content="Quaaash" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-[#020308] bg-home-pattern bg-center md:bg-right-top bg-no-repeat pt-[30px] pr-0 md:pr-[34px]">
-        <Header>
+      <div className="bg-[#020308] bg-home-pattern bg-center md:bg-right-top bg-no-repeat sm:pt-[30px] pr-0 md:pr-[34px]">
+        <Header isShowTitle>
           <HeaderButton />
         </Header>
         <div className="mt-[265px] text-center ml-0 md:ml-[120px]">
@@ -101,7 +101,7 @@ const Home: FC<HomeProps> = ({ data }) => {
       </section>
       <section className="px-5 md:pl-[67px] md:pr-[137px] pt-[131px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 2xl:gap-[56px] mb-[614px]">
         <div className="flex flex-col justify-center">
-          <span className="mb-[23px] font-light text-[64px] leading-[77px] tracking-[-0.333333px]">
+          <span className="mb-[23px] font-light text-[60px] sm:text-[64px] leading-[77px] tracking-[-0.333333px]">
             New & <br /> <strong>Noteworthy</strong>
           </span>
           <div className="bg-primary w-[96px] h-[9px]"></div>

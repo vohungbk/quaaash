@@ -52,7 +52,7 @@ export const Footer = () => {
           className="mb-[60px] rounded-[5px] bg-[#ffffff] px-[42px] py-5 text-[#8F8F8F] text-[28px] leading-[42px] focus-visible:outline-none"
           placeholder="Email"
         />
-        <div className="flex gap-[30px] items-center">
+        <div className="flex gap-5 sm:gap-[30px] items-center">
           <img src="/icon/fb.svg" alt="" className="cursor-pointer" />
           <img src="/icon/instagram.svg" alt="" className="cursor-pointer" />
           <img src="/icon/twitter.svg" alt="" className="cursor-pointer" />
