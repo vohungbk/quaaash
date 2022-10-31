@@ -41,7 +41,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
 
   const CategoryItem = (artist: Artists) => (
     <div className="flex flex-col">
-      <div className="h-[400px] 2xl:h-[534px] relative mb-[35px] inline-block">
+      <div className="h-[400px] 2xl:h-[534px] relative mb-5 sm:mb-[35px] inline-block">
         <img
           src={artist.profilePicture || '/img/artist3.svg'}
           alt=""
@@ -53,7 +53,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           </span>
         </div>
       </div>
-      <p className="font-medium text-[36px] leading-[54px] tracking-[-0.408px]">
+      <p className="font-medium text-2xl sm:text-[36px] leading-[54px] tracking-[-0.408px]">
         {artist.name}
       </p>
     </div>
@@ -127,12 +127,12 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           <ButtonStart text="Start Your Song" className="px-[38px] py-[20px]" />
         </div>
       </section>
-      <section className="bg-[#272669] pt-[103px] pb-[48px] px-5 sm:pr-[78px] sm:pl-[95px]">
-        <div className="flex items-center flex-wrap lg:flex-nowrap gap-5 md:gap-[63px] mb-[66px]">
+      <section className="bg-[#272669] pt-10 sm:pt-[103px] pb-[48px] px-5 sm:pr-[78px] sm:pl-[95px]">
+        <div className="flex items-center flex-wrap lg:flex-nowrap gap-5 md:gap-[63px] mb-10 sm:mb-[66px]">
           <div className="col-span-2 relative w-full lg:w-[60%]">
             <input
               placeholder="Search artist by name"
-              className="text-[#000000] pl-14 sm:pl-[139px] py-5 sm:py-[38px] font-[Inter] font-medium text-2xl sm:text-[36px] leading-[44px] focus-visible:outline-none border-2 border-solid border-white rounded-[5px] shadow-black025 w-full"
+              className="text-[#000000] pl-10 sm:pl-[139px] py-[14px] sm:py-[38px] font-[Inter] font-medium text-[14px] sm:text-[36px] leading-[17px] sm:leading-[44px] focus-visible:outline-none border-2 border-solid border-white rounded-[5px] shadow-black025 w-full"
               value={searchText}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 e.preventDefault();
@@ -144,23 +144,23 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
             <img
               src="/icon/search.svg"
               alt=""
-              className="absolute left-2 sm:left-[66px] top-[50%] translate-y-[-24px]"
+              className="absolute left-[15px] sm:left-[66px] top-[15px] sm:top-[50%] sm:translate-y-[-24px] w-[15px] sm:w-auto h-[15px] sm:h-auto"
             />
           </div>
 
           <button
-            className="border-2 border-solid border-white rounded-[5px] drop-shadow-black025 py-6 sm:py-[43px] sm:px-[144px] font-semibold text-[52px] leading-[38px] w-full lg:w-auto bg-transparent"
+            className="border-2 border-solid border-white rounded-[5px] drop-shadow-black025 py-5 sm:py-[43px] sm:px-[144px] font-semibold text-[20px] sm:text-[52px] leading-6 sm:leading-[38px] w-full lg:w-auto bg-transparent"
             onClick={getData}
           >
             Search
           </button>
         </div>
-        <div className="text-center">
+        <div className="sm:text-center">
           {CATEGORY.map((item) => (
             <div
               key={uuidv4()}
               className={clsx(
-                'rounded-[180px] py-[33px] px-[62px] inline-block mr-4 mb-[60px] cursor-pointer',
+                'rounded-[180px] py-[14px] sm:py-[33px] px-10 sm:px-[62px] inline-block mr-4 mb-4 sm:mb-[60px] cursor-pointer',
                 selectedCategory.includes(item.key)
                   ? 'bg-primary'
                   : 'bg-[#403E86]'
@@ -172,7 +172,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           ))}
         </div>
       </section>
-      <section className="pt-[86px] px-5 sm:px-[134px]">
+      <section className="pt-10 sm:pt-[86px] px-5 sm:px-[134px]">
         {!!artists &&
           CATEGORY?.filter((category) => category.key !== 'all')?.map(
             (category) => {
@@ -185,9 +185,9 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
 
               if (!usersByCategory.length) return null;
               return (
-                <div key={uuidv4()} className="mb-[100px]">
-                  <div className="mb-[100px] flex items-center sm:justify-start justify-between">
-                    <h2 className="font-[Inter] font-semibold text-[40px] sm:text-[62px] leading-[58px] md:leading-[38px] mr-4 md:mr-9">
+                <div key={uuidv4()} className="mb-10 sm:mb-[100px]">
+                  <div className="mb-10 sm:mb-[100px] flex items-center sm:justify-start justify-between">
+                    <h2 className="font-inter font-semibold text-[27px] sm:text-[62px] leading-7 md:leading-[38px] mr-4 md:mr-9">
                       {category.value}
                     </h2>
                     <Line width="w-[81px]" height="h-4" bgColor="bg-primary" />

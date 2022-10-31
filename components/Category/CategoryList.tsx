@@ -23,12 +23,16 @@ export const CategoryList: FC<CategoryListProps> = ({
   };
   return (
     <section className={clsx('px-5 md:px-[135px] pt-[76px]', className)}>
-      <div className="flex justify-end md:justify-between items-center flex-wrap mb-[80px]">
-        <div className="flex items-center justify-between gap-2 md:gap-[78px] mb-5 lg:mb-0">
-          <h2 className="font-inter font-semibold text-[32px] md:text-[62px] leading-[38px]">
+      <div className="flex justify-between items-center flex-wrap mb-5 sm:mb-[80px]">
+        <div className="flex items-center justify-between gap-2 md:gap-[78px]">
+          <h2 className="font-inter font-semibold text-[18px] sm:text-[32px] md:text-[62px] leading-[27px] sm:leading-[38px]">
             {title}
           </h2>
-          <Line width="w-[40px] md:w-[81px]" height="h-4" bgColor="bg-primary" />
+          <Line
+            width="w-[40px] md:w-[81px] hidden sm:block"
+            height="h-4"
+            bgColor="bg-primary"
+          />
         </div>
         <ButtonPrimary
           text="View all"

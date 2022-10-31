@@ -53,7 +53,7 @@ export const Header: FC<HeaderProps> = ({
       </header>
       <header
         className={clsx(
-          'pl-5 md:ml-[120px] justify-between sm:items-center flex sm:hidden z-10',
+          'pl-5 flex sm:hidden z-10',
           className,
           openMenu && 'h-[100vh] w-full'
         )}
@@ -70,7 +70,7 @@ export const Header: FC<HeaderProps> = ({
         {isShowTitle && (
           <h3
             className={clsx(
-              'font-[Pattaya] text-right text-[66px] leading-[92px] tracking-[.67px] cursor-pointer',
+              'font-[Pattaya] text-[28px] leading-[39px] tracking-[.67px] cursor-pointer ml-[90px]',
               openMenu ? 'hidden' : 'block'
             )}
           >
@@ -100,7 +100,7 @@ export const Header: FC<HeaderProps> = ({
           )}
         >
           <h3
-            className="font-[Pattaya] text-right text-[66px] leading-[92px] tracking-[.67px] cursor-pointer"
+            className="font-[Pattaya] text-center text-[28px] leading-[39px] tracking-[.67px] cursor-pointer mt-[30px]"
             onClick={() => {
               document.body.style.overflow = 'visible';
               router.push('/');
@@ -110,7 +110,7 @@ export const Header: FC<HeaderProps> = ({
           </h3>
           <div className="flex flex-col gap-10 pl-5 pt-10">
             <p
-              className="font-medium text-2xl tracking-[-0.333333px] cursor-pointer hover:text-primary"
+              className="font-medium text-xl tracking-[-0.333333px] cursor-pointer hover:text-primary"
               onClick={() => {
                 document.body.style.overflow = 'visible';
                 router.push('/customize-song');
@@ -118,7 +118,7 @@ export const Header: FC<HeaderProps> = ({
             >
               Customize Song
             </p>
-            <p className="font-medium text-2xl tracking-[-0.333333px] cursor-pointer hover:text-primary">
+            <p className="font-medium text-xl tracking-[-0.333333px] cursor-pointer hover:text-primary">
               Customize video
             </p>
           </div>
