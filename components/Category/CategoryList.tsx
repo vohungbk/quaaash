@@ -21,16 +21,17 @@ export const CategoryList: FC<CategoryListProps> = ({
   const handlerClick = () => {
     router.push('/customize-song');
   };
+
   return (
     <section className={clsx('px-5 md:px-[135px] pt-[76px]', className)}>
-      <div className="flex justify-between items-center flex-wrap mb-5 sm:mb-[80px]">
-        <div className="flex items-center justify-between gap-2 md:gap-[78px]">
-          <h2 className="font-inter font-semibold text-[18px] sm:text-[32px] md:text-[62px] leading-[27px] sm:leading-[38px]">
+      <div className="flex justify-between items-center flex-wrap mb-5 sm:mb-[35px]">
+        <div className="flex items-center justify-between gap-2 md:gap-10">
+          <h2 className="font-inter font-semibold text-[18px] sm:text-[32px] leading-[27px] sm:leading-[38px]">
             {title}
           </h2>
           <Line
-            width="w-[40px] md:w-[81px] hidden sm:block"
-            height="h-4"
+            width="w-[40px] md:w-[54px] hidden sm:block"
+            height="h-[9px]"
             bgColor="bg-primary"
           />
         </div>
@@ -41,7 +42,7 @@ export const CategoryList: FC<CategoryListProps> = ({
           onClick={handlerClick}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-6">
         {data?.map((item) => (
           <CategoryItem key={uuidv4()} data={item} />
         ))}

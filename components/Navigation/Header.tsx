@@ -25,7 +25,7 @@ export const Header: FC<HeaderProps> = ({
       >
         <div className="sm:flex gap-[40px] md:gap-[120px] items-center justify-between">
           <h3
-            className="font-[Pattaya] text-[66px] leading-[92px] tracking-[.67px] cursor-pointer"
+            className="font-[Pattaya] text-[66px] leading-[92px] tracking-[.67px] cursor-pointer font-normal"
             onClick={() => {
               document.body.style.overflow = 'visible';
               router.push('/');
@@ -35,7 +35,7 @@ export const Header: FC<HeaderProps> = ({
           </h3>
           <div className="flex items-center">
             <p
-              className="mr-4 md:mr-5 xl:mr-[140px] font-medium text-2xl tracking-[-0.333333px] cursor-pointer hover:text-primary"
+              className="mr-4 md:mr-5 xl:mr-[140px] font-medium text-[16px] leading-6 tracking-[-0.333333px] cursor-pointer hover:text-primary"
               onClick={() => {
                 document.body.style.overflow = 'visible';
                 router.push('/customize-song');
@@ -43,8 +43,8 @@ export const Header: FC<HeaderProps> = ({
             >
               Customize Song
             </p>
-            <p className="font-medium text-2xl tracking-[-0.333333px] cursor-pointer hover:text-primary">
-              Customize video
+            <p className="font-medium text-[16px] leading-6 tracking-[-0.333333px] cursor-pointer hover:text-primary">
+              Customize video wish
             </p>
           </div>
         </div>
