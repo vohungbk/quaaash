@@ -42,7 +42,7 @@ export const CategoryList: FC<CategoryListProps> = ({
           onClick={handlerClick}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-8">
         {data?.map((item) => (
           <CategoryItem key={uuidv4()} data={item} />
         ))}

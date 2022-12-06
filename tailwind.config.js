@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        pattaya: ['Pattaya', 'sans-serif'],
       },
       colors: {
         primary: '#9A60DB',

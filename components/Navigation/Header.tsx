@@ -24,15 +24,15 @@ export const Header: FC<HeaderProps> = ({
         )}
       >
         <div className="sm:flex gap-[40px] md:gap-[120px] items-center justify-between">
-          <h3
-            className="font-[Pattaya] text-[66px] leading-[92px] tracking-[.67px] cursor-pointer font-normal"
+          <img
+            src="img/logo.svg"
+            alt=""
+            className="cursor-pointer"
             onClick={() => {
               document.body.style.overflow = 'visible';
               router.push('/');
             }}
-          >
-            Quaaash
-          </h3>
+          />
           <div className="flex items-center">
             <p
               className="mr-4 md:mr-5 xl:mr-[140px] font-medium text-[16px] leading-6 tracking-[-0.333333px] cursor-pointer hover:text-primary"
@@ -70,7 +70,7 @@ export const Header: FC<HeaderProps> = ({
         {isShowTitle && (
           <h3
             className={clsx(
-              'font-[Pattaya] text-[28px] leading-[39px] tracking-[.67px] cursor-pointer ml-[90px]',
+              'font-pattaya text-[28px] leading-[39px] tracking-[.67px] cursor-pointer ml-[90px]',
               openMenu ? 'hidden' : 'block'
             )}
           >
@@ -100,7 +100,7 @@ export const Header: FC<HeaderProps> = ({
           )}
         >
           <h3
-            className="font-[Pattaya] text-center text-[28px] leading-[39px] tracking-[.67px] cursor-pointer mt-[30px]"
+            className="font-pattaya text-center text-[28px] leading-[39px] tracking-[.67px] cursor-pointer mt-[30px]"
             onClick={() => {
               document.body.style.overflow = 'visible';
               router.push('/');

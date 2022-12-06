@@ -108,7 +108,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           />
         </div>
 
-        <Header className="absolute top-0 right-0 left-0 pt-5 sm:pt-0 mr-[34px]">
+        <Header className="absolute top-0 right-0 left-0 pt-5 sm:pt-0 mr-[34px] sm:mt-[30px]">
           <HeaderButton />
         </Header>
         <div className="absolute top-[353px] left-0 sm:left-[128px] w-full sm:max-w-[37%] px-5 sm:px-0">
@@ -175,12 +175,12 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
 
               if (!usersByCategory.length) return null;
               return (
-                <div key={uuidv4()} className="mb-10 sm:mb-[100px]">
-                  <div className="mb-10 sm:mb-[100px] flex items-center sm:justify-start justify-between">
-                    <h2 className="font-inter font-semibold text-[27px] sm:text-[62px] leading-7 md:leading-[38px] mr-4 md:mr-9">
+                <div key={uuidv4()} className="mb-10 sm:mb-[88px]">
+                  <div className="mb-10 sm:mb-[48px] flex items-center sm:justify-start justify-between">
+                    <h2 className="font-inter font-semibold text-[27px] sm:text-[32px] leading-7 md:leading-[38px] mr-4 md:mr-9">
                       {category.value}
                     </h2>
-                    <Line width="w-[81px]" height="h-4" bgColor="bg-primary" />
+                    <Line width="w-[81px]" height="h-2" bgColor="bg-primary" />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-[56px]">
                     {usersByCategory.map((item) => CategoryItem(item))}

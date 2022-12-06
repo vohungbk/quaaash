@@ -66,11 +66,11 @@ const Home: FC<HomeProps> = ({ data }) => {
       />
       <CategoryList
         title="Personalized Video"
-        className="mb-10 sm:mb-[76px]"
+        className="mb-10 sm:mb-[76px] pt-0"
         data={data?.topVideos.slice(0, 6)}
       />
       <section className="bg-[#272669] bg-opacity-[0.79] grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[641px]">
-        <div className="bg-artist mix-blend-luminosity bg-no-repeat bg-center bg-contain sm:bg-cover h-[310px] sm:h-[641px] w-full lg:h-full"></div>
+        <div className="bg-artist bg-opacity-75 bg-[#272669] bg-no-repeat bg-center bg-contain sm:bg-cover h-[310px] sm:h-[641px] w-full lg:h-full"></div>
         <div className="flex flex-col justify-center items-center">
           <div className="text-center">
             <h4 className="font-light text-[18px] sm:text-2xl leading-[27px] sm:leading-[108px] mb-[30px] mt-10 sm:mt-0">
@@ -90,7 +90,7 @@ const Home: FC<HomeProps> = ({ data }) => {
             <h4 className="font-semibold sm:font-bold text-[30px] sm:text-[32px] leading-[38px] sm:leading-[76px] mb-[30px] sm:mb-0">
               Tell us about the occasion.
             </h4>
-            <p className="font-light text-base leading-6 sm:leading-[19px] mb-[50px]">
+            <p className="font-light text-center max-w-[436px] text-base leading-6 sm:leading-[19px] mb-[50px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
@@ -102,18 +102,12 @@ const Home: FC<HomeProps> = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="px-5 md:pl-[67px] md:pr-[137px] pt-10 sm:pt-62px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-10 2xl:gap-[43px] mb-[400px] sm:mb-[421px]">
+      <section className="px-5 md:pl-[67px] md:pr-[70px] pt-10 sm:pt-62px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-10 2xl:gap-[43px] mb-[400px] sm:mb-[421px]">
         <div className="flex flex-row sm:flex-col justify-between sm:justify-center">
           <span className="sm:mb-[49px] font-semibold sm:font-light text-[18px] sm:text-[32px] leading-7 sm:leading-[39px] tracking-[-0.333333px]">
             New & <br className="hidden sm:block" /> <strong>Noteworthy</strong>
           </span>
           <div className="bg-primary w-[96px] h-[9px] hidden sm:block mb-[49px]"></div>
-          <ButtonPrimary
-            text="View all"
-            className="rounded-[130px]"
-            isShowIcon
-            onClick={() => router.push('/customize-song')}
-          />
         </div>
         {data?.newUsers?.slice(0, 5).map((user) => (
           <div key={uuidv4()}>
