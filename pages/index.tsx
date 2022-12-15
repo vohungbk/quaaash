@@ -33,7 +33,7 @@ const Home: FC<HomeProps> = ({ data }) => {
         <meta name="description" content="Quaaash" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-[#020308] bg-home-pattern bg-center md:bg-right-top bg-no-repeat bg-cover sm:bg-auto sm:pt-[30px] pr-0 md:pr-[34px]">
+      <div className="bg-[#020308] bg-home-pattern bg-center md:bg-right-top bg-no-repeat bg-cover sm:bg-contain sm:pt-[30px] pr-0 md:pr-[34px]">
         <Header isShowTitle>
           <HeaderButton />
         </Header>
@@ -61,7 +61,7 @@ const Home: FC<HomeProps> = ({ data }) => {
       </div>
       <CategoryList
         title="Personalized Song"
-        className="mb-0 sm:mb-[88px]"
+        className="mb-0 sm:mb-[88px] pt-[76px]"
         data={data?.topAudios.slice(0, 6)}
       />
       <CategoryList
@@ -70,7 +70,13 @@ const Home: FC<HomeProps> = ({ data }) => {
         data={data?.topVideos.slice(0, 6)}
       />
       <section className="bg-[#272669] bg-opacity-[0.79] grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[641px]">
-        <div className="bg-artist bg-opacity-75 bg-[#272669] bg-no-repeat bg-center bg-contain sm:bg-cover h-[310px] sm:h-[641px] w-full lg:h-full"></div>
+        <div
+          className="h-[310px] sm:h-[641px] lg:h-[641px] mix-blend-luminosity"
+          style={{
+            background:
+              'linear-gradient(rgba(39, 38, 105, 0.8), rgba(39, 38, 105, 0.8)), url(/img/artist2.svg), no-repeat, center center/ cover',
+          }}
+        ></div>
         <div className="flex flex-col justify-center items-center">
           <div className="text-center">
             <h4 className="font-light text-[18px] sm:text-2xl leading-[27px] sm:leading-[108px] mb-[30px] mt-10 sm:mt-0">

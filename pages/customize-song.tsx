@@ -41,7 +41,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
 
   const CategoryItem = (artist: Artists) => (
     <div className="flex flex-col">
-      <div className="h-[250px] relative mb-5 sm:mb-[9px] inline-block">
+      <div className="w-[250px] h-[286px] relative mb-5 sm:mb-[9px] inline-block">
         <img
           src={artist.profilePicture || '/img/artist3.svg'}
           alt=""
@@ -98,15 +98,14 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
         <meta name="description" content="Customize Song" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="h-[1000px] relative sm:pt-[353px]">
+      <section className="h-[900px] relative sm:pt-[353px]">
         <div className="bg-primary bg-opacity-40 w-[40%] blur-[170px] h-full absolute top-0 left-0 hidden sm:block"></div>
-        <div className="sm:absolute top-0 right-0">
-          <img
-            src="/img/mark.webp"
-            alt=""
-            className="ml-auto w-full sm:w-auto"
-          />
-        </div>
+        <img
+          src="/img/artist5.png"
+          alt=""
+          className="bg-black sm:absolute top-0 right-0 w-[calc(100%_-_50%)] h-[852px]"
+          style={{ borderRadius: '45% 10% 50% 48% / 52% 0% 40% 48% ' }}
+        />
 
         <Header className="absolute top-0 right-0 left-0 pt-5 sm:pt-0 mr-[34px] sm:mt-[30px]">
           <HeaderButton />
@@ -123,7 +122,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
           <ButtonStart text="Start Your Song" className="px-[38px] py-[20px]" />
         </div>
       </section>
-      <section className="bg-[#272669] pt-10 sm:pt-53px] pb-[58px] px-5 sm:pr-[78px] sm:pl-[95px] text-center">
+      <section className="bg-[#272669] pt-10 sm:pt-[53px] pb-[58px] px-5 sm:pr-[78px] sm:pl-[95px] text-center">
         <div className="flex items-center justify-center flex-wrap lg:flex-nowrap gap-5 md:gap-[27px] mb-10 sm:mb-[66px]">
           <div className="col-span-2 relative w-full lg:w-[50%]">
             <input
@@ -182,7 +181,7 @@ const CustomizeSong: FC<CustomizeSongProps> = ({ data }) => {
                     </h2>
                     <Line width="w-[81px]" height="h-2" bgColor="bg-primary" />
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-6 gap-[56px]">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
                     {usersByCategory.map((item) => CategoryItem(item))}
                   </div>
                 </div>

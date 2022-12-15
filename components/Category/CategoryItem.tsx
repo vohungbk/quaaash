@@ -16,7 +16,7 @@ export const CategoryItem: FC<CategoryItemProps> = ({ data }) => {
           src={
             data?.thumbnail || data?.userId.profilePicture || '/img/artist3.svg'
           }
-          className="object-cover h-[250px] sm:h-[286px] w-full"
+          className="object-cover h-[250px] sm:h-[286px] w-full sm:w-[250px]"
         />
         <div className="absolute right-3 bottom-[10px] bg-secondary opacity-[0.74] rounded-[19px] px-[13px] py-[2px]">
           <span className="font-semibold text-base">${data.price}</span>
